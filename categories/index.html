@@ -63,6 +63,8 @@
         }
       }
     </script>-->
+<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+  <script>AV.initialize(QVyroXrIO6dcYEPUds1dQ00x-gzGzoHsz,GR3fhu7xWoliv1NMJVfodqCU);</script>
 <meta name="generator" content="Hexo 4.2.0"></head>
 <body>
     <!-- 背景轮播图功能 -->
@@ -396,9 +398,9 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/js/" style="font-size: 16.026002493133962px;" class="tag-cloud-link">js</a>
+    <a href="/tags/js/" style="font-size: 12.460223033742748px;" class="tag-cloud-link">js</a>
     
-    <a href="/tags/java/" style="font-size: 8.68766772939373px;" class="tag-cloud-link">java</a>
+    <a href="/tags/java/" style="font-size: 19.44035399333625px;" class="tag-cloud-link">java</a>
     
 </div>
                 
@@ -454,6 +456,75 @@
 <div id="gal-gotop">
     <i class="fa fa-angle-up"></i>
 </div>
+<!--page counter part-->
+<script>
+function addCount (Counter) {
+        url=$('.article-date').attr('href').trim();
+        title = $('.article-title').text().trim();
+        var query=new AV.Query(Counter);
+        //use url as unique idnetfication
+        query.equalTo("url",url);
+        query.find({
+            success: function(results){
+                if(results.length>0)
+                {
+                    var counter=results[0];
+                    counter.fetchWhenSave(true); //get recent result
+                    counter.increment("time");
+                    counter.save();
+                }
+                else
+                {
+                    var newcounter=new Counter();
+                    newcounter.set("title",title);
+                    newcounter.set("url",url);
+                    newcounter.set("time",1);
+                    newcounter.save(null,{
+                        success: function(newcounter){
+                        //alert('New object created');
+                        },
+                        error: function(newcounter,error){
+                        alert('Failed to create');
+                        }
+                        });
+                }
+            },
+            error: function(error){
+                //find null is not a error
+                alert('Error:'+error.code+" "+error.message);
+            }
+        });
+}
+$(function(){
+        var Counter=AV.Object.extend("Counter");
+        //only increse visit counting when intering a page
+        if ($('.article-title').length == 1)
+           addCount(Counter);
+        var query=new AV.Query(Counter);
+        query.descending("time");
+        // the sum of popular posts
+        query.limit(10); 
+        query.find({
+            success: function(results){
+                    for(var i=0;i<results.length;i++)    
+                    {
+                        var counter=results[i];
+                        title=counter.get("title");
+                        url=counter.get("url");
+                        time=counter.get("time");
+                        // add to the popularlist widget
+                        showcontent=title+" ("+time+")";
+                        //notice the "" in href
+                        $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
+                    }
+                },
+            error: function(error){
+                alert("Error:"+error.code+" "+error.message);
+            }
+            }
+        )
+        });
+</script>
 </body>
 
 <script src="/js/activate-power-mode.js"></script>
