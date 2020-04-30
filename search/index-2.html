@@ -201,7 +201,7 @@
     // 获取每页的页码数
     var pageSize = '10'
     var useLeancloud = ''
-    var useComment = ('false' === 'true')
+    var useComment = ('true' === 'true')
     $.getJSON('/content.json', function (json) {
       $('#search-breadcrumb').append(`搜索'${s}'的结果`)
       var result = getArticles(s, 'posts', json).concat(getArticles(s, 'pages', json))
@@ -225,7 +225,7 @@
       	var [month, day] = article.date.split('-')
         ''
         ''
-        var defaultPreview = '/imgs/preview/preview1.jpg'
+        var defaultPreview = '/imgs/preview/preview3.jpg'
         var preview = article.preview ? article.preview : defaultPreview
         var path = '/' + article.path
         resultList.append(`<div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
@@ -627,6 +627,30 @@
 <script src="/js/oni.js"></script>
 
 
+
+
+<script src="https://myau.moe/js/comment/gitment.browser.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Wed Apr 29 2020 21:32:16 GMT+0800'
+      window.commentConfig.owner = 'stillgo'
+      window.commentConfig.repo = 'backup'
+      window.commentConfig.client_id = '892e1813a5fb560aa2ba'
+      window.commentConfig.client_secret = 'c525831f962f77ac56a201f322822a032f482e4d'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Wed Apr 29 2020 21:32:16 GMT+0800',
+        owner: 'stillgo',
+        repo: 'backup',
+        client_id: '892e1813a5fb560aa2ba',
+        client_secret: 'c525831f962f77ac56a201f322822a032f482e4d',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
 
 
 </html>
