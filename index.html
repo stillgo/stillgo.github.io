@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="waitcc">
+    <meta name="author" content="stillgo">
     
     
     
@@ -11,7 +11,7 @@
     
     
     <title>bingo</title>
-    <link href="https://user.qzone.qq.com/1011832649" rel="prefetch" />
+    <link href="https://www.waitcc.com" rel="prefetch" />
 
     
 <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -73,7 +73,7 @@
     <div class="gal-menu gal-dropdown">
     <div class="circle" id="gal">
         <div class="ring">
-            <a href="https://user.qzone.qq.com/1011832649" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            <a href="https://www.waitcc.com" class="menuItem" style="left: 50%; top: 15%;">首页</a>
             
             <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
             
@@ -97,7 +97,7 @@
                     aria-expanded="false">
                 <span class="fa fa-lg fa-reorder"></span>
             </button>
-            <a href="https://user.qzone.qq.com/1011832649">
+            <a href="https://www.waitcc.com">
                 
                 <style>
                     #gal-header .navbar-brand {
@@ -243,7 +243,7 @@
                 <a href="/2020/04/30/ceshi/">
                     <div class="img">
                         
-                        <img src="/imgs/preview/preview4.jpg" alt="ceshi">
+                        <img src="/imgs/preview/preview1.jpg" alt="ceshi">
                     </div>
                     <div class="info">
                         
@@ -282,7 +282,7 @@
             <p style="text-align: center;">
                 <a href="/2020/04/30/ceshi/">
                     
-                    <img src="/imgs/preview/preview4.jpg" alt="ceshi">
+                    <img src="/imgs/preview/preview2.jpg" alt="ceshi">
                 </a>
             </p>
         </div>
@@ -369,7 +369,7 @@
             <p style="text-align: center;">
                 <a href="/2020/04/30/post-name/">
                     
-                    <img src="/imgs/preview/preview2.jpg" alt="测试">
+                    <img src="/imgs/preview/preview4.jpg" alt="测试">
                 </a>
             </p>
         </div>
@@ -410,7 +410,7 @@
                 <a href="/2020/04/29/hello-world/">
                     <div class="img">
                         
-                        <img src="/imgs/preview/preview4.jpg" alt="Hello World">
+                        <img src="/imgs/preview/preview3.jpg" alt="Hello World">
                     </div>
                     <div class="info">
                         
@@ -503,7 +503,7 @@
     <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
         <div class="panel-heading" style="text-align: center">
             <i class="fa fa-quote-left"></i>
-            waitcc
+            stillgo
             <i class="fa fa-quote-right"></i>
         </div>
         <div class="author-panel text-center">
@@ -620,9 +620,9 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/js/" style="font-size: 15.803684612760414px;" class="tag-cloud-link">js</a>
+    <a href="/tags/js/" style="font-size: 15.394004038232525px;" class="tag-cloud-link">js</a>
     
-    <a href="/tags/java/" style="font-size: 8.270088368612251px;" class="tag-cloud-link">java</a>
+    <a href="/tags/java/" style="font-size: 19.83892241648748px;" class="tag-cloud-link">java</a>
     
 </div>
                 
@@ -670,7 +670,7 @@
     </div>
     <footer id="gal-footer">
     <div class="container">
-        Copyright © 2020 waitcc git<a href="#" target="_blank">node.js</a>.&nbsp; <a href="# target="_blank"></a>
+        Copyright © 2020 stillgo git<a href="#" target="_blank">node.js</a>.&nbsp; <a href="# target="_blank"></a>
     </div>
 </footer>
 
@@ -678,35 +678,6 @@
 <div id="gal-gotop">
     <i class="fa fa-angle-up"></i>
 </div>
-$(function(){
-        var Counter=AV.Object.extend("Counter");
-        //only increse visit counting when intering a page
-        if ($('.article-title').length == 1)
-           addCount(Counter);
-        var query=new AV.Query(Counter);
-        query.descending("time");
-        // the sum of popular posts
-        query.limit(10); 
-        query.find({
-            success: function(results){
-                    for(var i=0;i<results.length;i++)    
-                    {
-                        var counter=results[i];
-                        title=counter.get("title");
-                        url=counter.get("url");
-                        time=counter.get("time");
-                        // add to the popularlist widget
-                        showcontent=title+" ("+time+")";
-                        //notice the "" in href
-                        $('.popularlist').append('<li><a href="'+url+'">'+showcontent+'</a></li>');
-                    }
-                },
-            error: function(error){
-                alert("Error:"+error.code+" "+error.message);
-            }
-            }
-        )
-        });
 </script>
 </body>
 
