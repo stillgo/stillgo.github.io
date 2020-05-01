@@ -55,8 +55,6 @@
         }
       }
     </script>-->
-<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
-  <script>AV.initialize(QVyroXrIO6dcYEPUds1dQ00x-gzGzoHsz,GR3fhu7xWoliv1NMJVfodqCU);</script>
 <meta name="generator" content="Hexo 4.2.0"></head>
 <body>
     <!-- 背景轮播图功能 -->
@@ -379,9 +377,9 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/js/" style="font-size: 8.673792293118062px;" class="tag-cloud-link">js</a>
+    <a href="/tags/js/" style="font-size: 17.276631495755687px;" class="tag-cloud-link">js</a>
     
-    <a href="/tags/java/" style="font-size: 15.021654651773524px;" class="tag-cloud-link">java</a>
+    <a href="/tags/java/" style="font-size: 10.87974504586196px;" class="tag-cloud-link">java</a>
     
 </div>
                 
@@ -437,45 +435,6 @@
 <div id="gal-gotop">
     <i class="fa fa-angle-up"></i>
 </div>
-<!--page counter part-->
-<script>
-function addCount (Counter) {
-        url=$('.article-date').attr('href').trim();
-        title = $('.article-title').text().trim();
-        var query=new AV.Query(Counter);
-        //use url as unique idnetfication
-        query.equalTo("url",url);
-        query.find({
-            success: function(results){
-                if(results.length>0)
-                {
-                    var counter=results[0];
-                    counter.fetchWhenSave(true); //get recent result
-                    counter.increment("time");
-                    counter.save();
-                }
-                else
-                {
-                    var newcounter=new Counter();
-                    newcounter.set("title",title);
-                    newcounter.set("url",url);
-                    newcounter.set("time",1);
-                    newcounter.save(null,{
-                        success: function(newcounter){
-                        //alert('New object created');
-                        },
-                        error: function(newcounter,error){
-                        alert('Failed to create');
-                        }
-                        });
-                }
-            },
-            error: function(error){
-                //find null is not a error
-                alert('Error:'+error.code+" "+error.message);
-            }
-        });
-}
 $(function(){
         var Counter=AV.Object.extend("Counter");
         //only increse visit counting when intering a page
