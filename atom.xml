@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>bingo</title>
+  
+  <subtitle>To be best</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.waitcc.com/"/>
+  <updated>2020-04-30T07:14:49.000Z</updated>
+  <id>http://www.waitcc.com/</id>
+  
+  <author>
+    <name>stillgo</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ceshi</title>
+    <link href="http://www.waitcc.com/2020/04/30/ceshi/"/>
+    <id>http://www.waitcc.com/2020/04/30/ceshi/</id>
+    <published>2020-04-30T07:14:49.000Z</published>
+    <updated>2020-04-30T07:14:49.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+      <category term="java" scheme="http://www.waitcc.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试</title>
+    <link href="http://www.waitcc.com/2020/04/30/post-name/"/>
+    <id>http://www.waitcc.com/2020/04/30/post-name/</id>
+    <published>2020-04-30T06:45:26.000Z</published>
+    <updated>2020-04-30T06:45:26.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+      <category term="js" scheme="http://www.waitcc.com/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://www.waitcc.com/2020/04/29/hello-world/"/>
+    <id>http://www.waitcc.com/2020/04/29/hello-world/</id>
+    <published>2020-04-29T12:44:52.356Z</published>
+    <updated>2020-04-29T12:44:52.356Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to </p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">``` bash</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-n
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
